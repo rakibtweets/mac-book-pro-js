@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  /* font-size: 5px; */
-}
 
 .product__detail {
   font-size: 1rem;
@@ -20,7 +17,7 @@ body {
 }
 .product__img img {
   width: 40vw;
-  height: 40vh;
+  height: 60vh;
 }
 
 .product__content {
