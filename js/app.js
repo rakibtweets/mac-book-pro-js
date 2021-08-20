@@ -12,6 +12,9 @@ function memoryCost(memorySpace){
     }
     itemMemory.innerText = memoryCost
 
+    totalPrice()
+
+
     return itemMemory.innerText
 
 }
@@ -34,6 +37,9 @@ function storageCost(storage){
 
     itemStorage.innerText = storageCost
 
+    totalPrice()
+
+
     return itemStorage.innerText
 
 }
@@ -53,9 +59,33 @@ function deliveryCost(isCharging){
     }
 
     deliveyPrice.innerText = deliverCharge
+
+    totalPrice()
+
+
     return deliveyPrice.innerText
 
 
+}
+
+//Total Price function
+
+function totalPrice(){
+    const itemMemory = document.getElementById('extra_memory')
+    let memoryCost = parseInt(itemMemory.innerText)
+    const itemStorage = document.getElementById('extra_storage')
+    let storageCost = parseInt(itemStorage.innerText)
+    const deliveyPrice = document.getElementById('delivery_cost')
+    let deliverCharge = parseInt(deliveyPrice.innerText) 
+    
+    const extraStorageCost = document.getElementById('extra_storage')
+    const deliveryCharge = document.getElementById('delivery_cost')
+    const totalPrice = memoryCost + storageCost + deliverCharge;
+    let totalPriceText = document.getElementById('total_price')
+    totalPriceText.innerText = totalPrice + 1299
+
+
+    return totalPriceText.innerText  ;
 }
 
 
