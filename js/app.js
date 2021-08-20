@@ -39,6 +39,26 @@ function storageCost(storage){
 }
 
 
+// deliver Cost function
+
+function deliveryCost(isCharging){
+    const deliveyPrice = document.getElementById('delivery_cost')
+    let deliverCharge = parseInt(deliveyPrice.innerText) 
+    if(isCharging == false){
+        
+        deliverCharge = 0
+    }
+    if(isCharging == true){
+        deliverCharge = 20
+    }
+
+    deliveyPrice.innerText = deliverCharge
+    return deliveyPrice.innerText
+
+
+}
+
+
 // memory storage 8gb/16 gb
 
 document.getElementById('memory_8gb').addEventListener('click',function(){
@@ -85,5 +105,27 @@ document.getElementById('storage_1tb').addEventListener('click',function(){
     const memoryStorageCost = storageCost(1);
 
 
+})
+
+// Delivery Cost
+
+//free delivery
+document.getElementById('delivery_free').addEventListener('click',function(){
+    
+   /*  const deliveyPrice = document.getElementById('delivery_cost')
+    let deliverCharge = parseInt(deliveyPrice.innerText) 
+    deliverCharge = 0
+    deliveyPrice.innerText = deliverCharge */
+
+    const freeDelivery = deliveryCost(false)
+    
+})
+
+// paid delivery
+
+document.getElementById('delivery_20').addEventListener('click',function(){
+
+    const paidDelivery = deliveryCost(true)
+    
 })
 
