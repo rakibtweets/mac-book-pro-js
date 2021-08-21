@@ -4,6 +4,7 @@ function memoryCost(memorySpace){
 
     const itemMemory = document.getElementById('extra_memory')
     let memoryCost = parseInt(itemMemory.innerText)
+
     if(memorySpace == 8){
 
         memoryCost = 0
@@ -14,6 +15,7 @@ function memoryCost(memorySpace){
     itemMemory.innerText = memoryCost
 
     totalPrice()
+
     discountTotalPrice()
 
     return itemMemory.innerText
@@ -38,9 +40,9 @@ function storageCost(storage){
 
     itemStorage.innerText = storageCost
 
-    totalPrice()
-    discountTotalPrice()
+    totalPrice();
 
+    discountTotalPrice();
 
     return itemStorage.innerText
 
@@ -48,7 +50,6 @@ function storageCost(storage){
 
 
 // deliver Cost function
-
 function deliveryCost(isCharging){
     const deliveyPrice = document.getElementById('delivery_cost')
     let deliverCharge = parseInt(deliveyPrice.innerText) 
@@ -62,16 +63,16 @@ function deliveryCost(isCharging){
 
     deliveyPrice.innerText = deliverCharge
 
-    totalPrice()
-    discountTotalPrice()
+    totalPrice();
+
+    discountTotalPrice();
 
     return deliveyPrice.innerText
 
 
 }
 
-//Total Price function
-
+//Total Pricing function
 function totalPrice(){
 
     const itemMemory = document.getElementById('extra_memory')
@@ -89,7 +90,7 @@ function totalPrice(){
     return totalPriceText.innerText  ;
 }
 
-//
+// discount calculation function
 function discountTotalPrice(){
 
     const basicTotalPrice = totalPrice()
@@ -99,7 +100,7 @@ function discountTotalPrice(){
 }
 
 
-// memory storage 8gb/16 gb
+// memory storage 8gb/16gb selection events
 
 document.getElementById('memory_8gb').addEventListener('click',function(){
     
@@ -117,7 +118,7 @@ document.getElementById('memory_16gb').addEventListener('click',function(){
 
 });
 
-// memory storage cost
+// memory storage cost selection events
 
 // 256gb default 0
 document.getElementById('storage_256gb').addEventListener('click',function(){
@@ -135,7 +136,7 @@ document.getElementById('storage_512gb').addEventListener('click',function(){
 
 });
 
-// 1 TB price 180
+// 1TB price 180
 document.getElementById('storage_1tb').addEventListener('click',function(){
 
     const memoryStorageCost = storageCost(1);
@@ -143,7 +144,7 @@ document.getElementById('storage_1tb').addEventListener('click',function(){
 
 });
 
-// Delivery Cost
+// Delivery Cost Events
 
 //free delivery
 document.getElementById('delivery_free').addEventListener('click',function(){

@@ -16,7 +16,11 @@ body {
   padding: 0 3rem;
   display: grid;
   grid-template-columns: 1fr 3fr;
-  gap: 2rem;
+  gap: 1rem;
+}
+.product__description{
+  width: 90%;
+  margin-top: 1rem;
 }
 .product__img img {
   width: 35vw;
@@ -55,6 +59,7 @@ body {
   background-color: rgba(128, 128, 128, 0.438);
 }
 
+/* Pricing Table */
 table {
   font-weight: 700;
 }
@@ -81,9 +86,7 @@ table tr:last-child td {
   display: flex;
   gap: 1.5rem;
 }
-/* .promo__btn{
-    border-color: orange;
-} */
+/* promo code input field */
 input[type="text"] {
   width: 90%;
   padding: 1rem 2rem;
@@ -93,7 +96,7 @@ input[type="text"] {
 .final-total {
   font-size: 2rem;
 }
-
+/* promo code apply btn */
 #promo__btn {
   font-size: 2rem;
   background-color: #DD3543;
