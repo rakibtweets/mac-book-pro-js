@@ -129,3 +129,14 @@ input[type="text"] {
   }
   
 }
+
+/* small device */
+@media screen and (max-width: 576px){
+
+  .memory,
+  .storage,
+  .delivery{
+    flex-direction: column;
+  }
+ 
+}
