@@ -13,6 +13,7 @@ function memoryCost(memorySpace){
     itemMemory.innerText = memoryCost
 
     totalPrice()
+    discountTotalPrice()
 
 
     return itemMemory.innerText
@@ -38,6 +39,7 @@ function storageCost(storage){
     itemStorage.innerText = storageCost
 
     totalPrice()
+    discountTotalPrice()
 
 
     return itemStorage.innerText
@@ -61,6 +63,7 @@ function deliveryCost(isCharging){
     deliveyPrice.innerText = deliverCharge
 
     totalPrice()
+    discountTotalPrice()
 
 
     return deliveyPrice.innerText
@@ -86,6 +89,15 @@ function totalPrice(){
 
 
     return totalPriceText.innerText  ;
+}
+
+//
+function discountTotalPrice(){
+    const basicTotalPrice = totalPrice()
+
+    let discoutTotalPrice = document.getElementById('final_total')
+    discoutTotalPrice.innerText = basicTotalPrice
+    return discoutTotalPrice.innerText
 }
 
 
@@ -156,6 +168,32 @@ document.getElementById('delivery_free').addEventListener('click',function(){
 document.getElementById('delivery_20').addEventListener('click',function(){
 
     const paidDelivery = deliveryCost(true)
+    
+})
+
+
+// promo code discount
+
+document.getElementById('promo__btn').addEventListener('click',function(){
+    const promoCodeField = document.getElementById('promo_code_field')
+    const promoCode = promoCodeField.value 
+    const totalPrice = discountTotalPrice()
+
+    if(promoCode == 'stevekaku'){
+
+        var discountPrice = parseInt(totalPrice) * .2;
+       
+    }
+    else{
+        alert('Invalid Promocode')
+    }
+    promoCodeField.value = ''
+    const discoutTotalAmount = parseInt(totalPrice) - discountPrice
+    const finalToal = document.getElementById('final_total')
+
+    finalToal.innerText = discoutTotalAmount
+    
+    
     
 })
 
