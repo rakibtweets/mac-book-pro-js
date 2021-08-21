@@ -53,10 +53,8 @@ body {
 
 .memory_item:hover,
 .memory_item:focus {
-  
   background-color: rgba(36, 37, 42, 0.863);
   color: white;
-
 }
 
 /* Pricing Table */
@@ -117,26 +115,22 @@ input[type="text"] {
 /* media query */
 
 @media screen and (max-width: 768px) {
-  .product__detail{
+  .product__detail {
     display: grid;
     grid-template-columns: 1fr 1fr;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-
   }
-  
 }
 
 /* small device */
-@media screen and (max-width: 576px){
-
+@media screen and (max-width: 576px) {
   .memory,
   .storage,
-  .delivery{
+  .delivery {
     flex-direction: column;
+    row-gap: 1rem;
   }
- 
 }
