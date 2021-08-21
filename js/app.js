@@ -189,15 +189,15 @@ document.getElementById('promo__btn').addEventListener('click',function(){
     }
 
     // error message
-    else{        
+    else{    
+
     const failMsg = document.getElementById('fail_msg');
     failMsg.style.display = 'block'
     const successMsg = document.getElementById('success_msg');
     successMsg.style.display = 'none'
     promoCodeField.value = ''
     }
-
-   
+  
 });
 
 

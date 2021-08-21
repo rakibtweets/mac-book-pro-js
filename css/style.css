@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +17,7 @@ body {
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
 }
-.product__description{
+.product__description {
   width: 90%;
   margin-top: 1rem;
 }
@@ -50,13 +49,17 @@ body {
 .storage__detail,
 .delivery__detail {
   border: 1px solid #ddd;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
+  color: black;
   cursor: pointer;
 }
 
 .memory_item:hover,
 .memory_item:focus {
-  background-color: rgba(128, 128, 128, 0.438);
+  
+  background-color: rgba(36, 37, 42, 0.863);
+  color: white;
+
 }
 
 /* Pricing Table */
@@ -70,7 +73,9 @@ table tr td {
 }
 
 table tr:first-child td,
-table tr:nth-child(7) td {
+table tr:nth-child(7) td,
+table tr:nth-child(8) td,
+table tr:nth-child(9) td {
   border-top: none;
 }
 table tr:nth-child(5) td,
@@ -97,13 +102,13 @@ input[type="text"] {
   font-size: 2rem;
 }
 #success_msg,
-#fail_msg{
+#fail_msg {
   display: none;
 }
 /* promo code apply btn */
 #promo__btn {
   font-size: 2rem;
-  background-color: #DD3543;
+  background-color: #dd3543;
   color: white;
   padding: 0.4rem 1.2rem;
   margin: 6px 0;
