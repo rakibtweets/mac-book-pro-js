@@ -175,25 +175,25 @@ document.getElementById('delivery_20').addEventListener('click',function(){
 // promo code discount
 
 document.getElementById('promo__btn').addEventListener('click',function(){
+
     const promoCodeField = document.getElementById('promo_code_field')
     const promoCode = promoCodeField.value 
     const totalPrice = discountTotalPrice()
+    const finalToal = document.getElementById('final_total')
+
 
     if(promoCode == 'stevekaku'){
 
-        var discountPrice = parseInt(totalPrice) * .2;
-       
+    const discountPrice = parseInt(totalPrice) * .2;
+    const discoutTotalAmount = parseInt(totalPrice) - discountPrice
+    promoCodeField.value = ''
+    finalToal.innerText = discoutTotalAmount  
     }
     else{
+        // document.getElementById('promo_code_field').value= 'Invalid promo code'     
         alert('Invalid Promocode')
     }
-    promoCodeField.value = ''
-    const discoutTotalAmount = parseInt(totalPrice) - discountPrice
-    const finalToal = document.getElementById('final_total')
-
-    finalToal.innerText = discoutTotalAmount
-    
-    
-    
+   
 })
+
 
