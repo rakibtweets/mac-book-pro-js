@@ -179,13 +179,21 @@ document.getElementById('promo__btn').addEventListener('click',function(){
     const discountPrice = parseInt(totalPrice) * .2;
     const discoutTotalAmount = parseInt(totalPrice) - discountPrice
     promoCodeField.value = ''
-    finalToal.innerText = discoutTotalAmount  
+    finalToal.innerText = discoutTotalAmount 
+    
+    const successMsg = document.getElementById('success_msg');
+    successMsg.style.display = 'block'
+    const failMsg = document.getElementById('fail_msg');
+    failMsg.style.display = 'none'
     
     }
 
     // error message
     else{        
-    alert('Invalid Promo Code')
+    const failMsg = document.getElementById('fail_msg');
+    failMsg.style.display = 'block'
+    const successMsg = document.getElementById('success_msg');
+    successMsg.style.display = 'none'
     promoCodeField.value = ''
     }
 

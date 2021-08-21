@@ -96,6 +96,10 @@ input[type="text"] {
 .final-total {
   font-size: 2rem;
 }
+#success_msg,
+#fail_msg{
+  display: none;
+}
 /* promo code apply btn */
 #promo__btn {
   font-size: 2rem;
