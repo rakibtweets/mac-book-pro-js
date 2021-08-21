@@ -71,18 +71,18 @@ function deliveryCost(isCharging){
 //Total Price function
 
 function totalPrice(){
+
     const itemMemory = document.getElementById('extra_memory')
     let memoryCost = parseInt(itemMemory.innerText)
     const itemStorage = document.getElementById('extra_storage')
     let storageCost = parseInt(itemStorage.innerText)
     const deliveyPrice = document.getElementById('delivery_cost')
     let deliverCharge = parseInt(deliveyPrice.innerText) 
-    
-    const extraStorageCost = document.getElementById('extra_storage')
-    const deliveryCharge = document.getElementById('delivery_cost')
-    const totalPrice = memoryCost + storageCost + deliverCharge;
+     
+    const basePrice = 1299
+    const totalPrice = memoryCost + storageCost + deliverCharge + basePrice;
     let totalPriceText = document.getElementById('total_price')
-    totalPriceText.innerText = totalPrice + 1299
+    totalPriceText.innerText = totalPrice 
 
 
     return totalPriceText.innerText  ;
