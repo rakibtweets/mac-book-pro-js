@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mac Book Pro</title>
+    <!-- Bootstrap CND -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- custome css link -->
     <link rel="stylesheet" href="css/style.css" />
-    <!-- Bootstrap CDN link -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
   </head>
 
 
@@ -39,24 +39,24 @@
               <div class="product__memory">
                   <h3 class="memory__title">Memory</h3>
                   <div class="memory">
-                      <span id="memory_8gb" class="memory__detail memory_item">8GB unified memory</span>
-                      <span id="memory_16gb" class="memory__detail memory_item">16GB unified memory</span>
+                      <button id="memory_8gb" class="memory__detail memory_item btn btn-outline-secondary text-dark">8GB unified memory</button>
+                      <button id="memory_16gb" class="memory__detail memory_item btn btn-outline-secondary text-dark">16GB unified memory</button>
                   </div>
               </div>
               <div class="product__storage">
                   <h3 class="storage__title">Memory Storage</h3>
                   <div class="storage">
-                      <span id="storage_256gb" class="storage__detail memory_item">256GB SSD storage</span>
-                      <span id="storage_512gb" class="storage__detail memory_item">512GB SSD storage</span>
-                      <span id="storage_1tb" class="storage__detail memory_item">1TB SSD storage</span>
+                      <button id="storage_256gb" class="storage__detail memory_item btn btn-outline-secondary text-dark">256GB SSD storage</button>
+                      <button id="storage_512gb" class="storage__detail memory_item btn btn-outline-secondary text-dark">512GB SSD storage</button>
+                      <button id="storage_1tb" class="storage__detail memory_item btn btn-outline-secondary text-dark">1TB SSD storage</button>
                   </div>
               </div>
 
               <div class="product__delivery">
                   <h3 class="delivery__title">Choose your delivery option</h3>
                   <div class="delivery">
-                      <span id="delivery_free" class="delivery__detail memory_item">Friday, Aug 25 FREE Prime Delivery</span>
-                      <span id="delivery_20" class="delivery__detail memory_item">Friday, Aug 21 Delivery charge $20</span>
+                      <button id="delivery_free" class="delivery__detail memory_item btn btn-outline-secondary text-dark">Friday, Aug 25 FREE Prime Delivery</button>
+                      <button id="delivery_20" class="delivery__detail memory_item btn btn-outline-secondary text-dark">Friday, Aug 21 Delivery charge $20</button>
                   </div>
 
               </div>
@@ -94,13 +94,13 @@
                       </tr>
 
                       <tr>
-                          <td id="promo_code"><input id="promo_code_field" type="text"></td>
-                          <td> <button id="promo__btn" class="btn promo__btn" type="submit">Apply</button></td>
+                          <td id="promo_code"><input id="promo_code_field" class="form-control" type="text"></td>
+                          <td> <button id="promo__btn" class="btn btn-outline-secondary promo__btn " type="submit">Apply</button></td>
                       </tr>
 
                       <tr>
-                          <td>Total:</td>
-                          <td >$ <span id="final_total">1299</span></td>
+                          <td class="final-total">Total: $<span id="final_total">1299</span></td>
+                          <td ></td>
                       </tr>
 
                   </table>

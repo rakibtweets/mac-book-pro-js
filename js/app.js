@@ -1,4 +1,5 @@
-// memory cost 
+
+// memory cost  function
 function memoryCost(memorySpace){
 
     const itemMemory = document.getElementById('extra_memory')
@@ -14,7 +15,6 @@ function memoryCost(memorySpace){
 
     totalPrice()
     discountTotalPrice()
-
 
     return itemMemory.innerText
 
@@ -65,7 +65,6 @@ function deliveryCost(isCharging){
     totalPrice()
     discountTotalPrice()
 
-
     return deliveyPrice.innerText
 
 
@@ -87,14 +86,13 @@ function totalPrice(){
     let totalPriceText = document.getElementById('total_price')
     totalPriceText.innerText = totalPrice 
 
-
     return totalPriceText.innerText  ;
 }
 
 //
 function discountTotalPrice(){
-    const basicTotalPrice = totalPrice()
 
+    const basicTotalPrice = totalPrice()
     let discoutTotalPrice = document.getElementById('final_total')
     discoutTotalPrice.innerText = basicTotalPrice
     return discoutTotalPrice.innerText
@@ -104,42 +102,38 @@ function discountTotalPrice(){
 // memory storage 8gb/16 gb
 
 document.getElementById('memory_8gb').addEventListener('click',function(){
-    /* const itemMemory = document.getElementById('extra_memory')
-    let memoryCost = parseInt(itemMemory.innerText)
-    memoryCost = 0
-    itemMemory.innerText = memoryCost */
+    
+    //function calling
     const memoryPrice = memoryCost(8)
 
-})
+});
 
 // 16gb memory
 
 document.getElementById('memory_16gb').addEventListener('click',function(){
 
+    //functon calling
     const memoryPrice = memoryCost(16)
 
-})
+});
 
 // memory storage cost
 
 // 256gb default 0
 document.getElementById('storage_256gb').addEventListener('click',function(){
 
-    /* const itemStorage = document.getElementById('extra_storage')
-    let storageCost = parseInt(itemStorage.innerText)
-    storageCost = 0
-    itemStorage.innerText = storageCost */
-
+    // storageCost() function calling
     const memoryStorageCost = storageCost(256);
 
-})
+});
 
 // 512 gb price $100
 document.getElementById('storage_512gb').addEventListener('click',function(){
 
+    //StorageCost() function calling
     const memoryStorageCost = storageCost(512);
 
-})
+});
 
 // 1 TB price 180
 document.getElementById('storage_1tb').addEventListener('click',function(){
@@ -147,21 +141,17 @@ document.getElementById('storage_1tb').addEventListener('click',function(){
     const memoryStorageCost = storageCost(1);
 
 
-})
+});
 
 // Delivery Cost
 
 //free delivery
 document.getElementById('delivery_free').addEventListener('click',function(){
-    
-   /*  const deliveyPrice = document.getElementById('delivery_cost')
-    let deliverCharge = parseInt(deliveyPrice.innerText) 
-    deliverCharge = 0
-    deliveyPrice.innerText = deliverCharge */
 
+    //deliveryCost() function calling
     const freeDelivery = deliveryCost(false)
     
-})
+});
 
 // paid delivery
 
@@ -169,7 +159,7 @@ document.getElementById('delivery_20').addEventListener('click',function(){
 
     const paidDelivery = deliveryCost(true)
     
-})
+});
 
 
 // promo code discount
@@ -181,19 +171,24 @@ document.getElementById('promo__btn').addEventListener('click',function(){
     const totalPrice = discountTotalPrice()
     const finalToal = document.getElementById('final_total')
 
-
+    // checking Promo Code
     if(promoCode == 'stevekaku'){
 
+    // 20% discount
     const discountPrice = parseInt(totalPrice) * .2;
     const discoutTotalAmount = parseInt(totalPrice) - discountPrice
     promoCodeField.value = ''
     finalToal.innerText = discoutTotalAmount  
+    
     }
-    else{
-        // document.getElementById('promo_code_field').value= 'Invalid promo code'     
-        alert('Invalid Promocode')
+
+    // error message
+    else{        
+    alert('Invalid Promo Code')
+    promoCodeField.value = ''
     }
+
    
-})
+});
 
 
